@@ -10,6 +10,7 @@ import FloatingCartButton from './components/FloatingCartButton';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 import PromoPopup from './components/PromoPopup';
+import PromoBanner from './components/PromoBanner';
 
 // Lazy load route components
 const AdminDashboard = lazy(() => import('./components/AdminDashboard'));
@@ -50,6 +51,7 @@ function MainApp() {
                 onCartClick={() => handleViewChange('cart')}
                 onMenuClick={() => handleViewChange('menu')}
             />
+            <PromoBanner />
 
             {currentView === 'menu' && (
                 <SubNav selectedCategory={selectedCategory} onCategoryClick={handleCategoryClick} />
